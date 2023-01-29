@@ -5,17 +5,28 @@ import q from '../data/quizes.json'
 import QuizPreview from '../components/QuizPreview.vue';
 const quizes = ref(q)
 
+const search = ref('')
+
+//filter quizes by search input
+const filteredQuizes = computed(() => {
+  return quizes.value.filter(quiz => quiz.header.toLowerCase().includes(search.value.toLowerCase()))
+})
+
+
+
 </script>
 
 <template>
   <main>
     <header>
       <h1>Welcome to Quizes</h1>
-      <input  placeholder="search" />
+      <input  placeholder="search" v-model="search"/>
     </header>
     <ul>
-      <li v-for="quiz in quizes" :key="quiz.id">
-        <QuizPreview :header="quiz.header" img="{{ quiz.img }}" :nQuestions="quiz.questions.length" />
+      <li v-for="quiz in filteredQuizes" :key="quiz.id">
+        <RouterLink :to="'/quiz/' + quiz.id">
+        <QuizPreview :header="quiz.header" img="{{ quiz.img }}" :nQuestions=quiz.questions.length />
+        </RouterLink>
       </li>
     </ul>
 </main>
@@ -23,6 +34,10 @@ const quizes = ref(q)
 
 
 <style scoped>
+
+
+
+
 header{
   display: flex;
   justify-content: space-between;
@@ -47,7 +62,9 @@ input{
 ul{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 1em
+  gap: 1em;
+  margin: 0 auto;
+  padding: 0;
 
 }
 
@@ -55,7 +72,6 @@ li{
   list-style: none;
   text-align: center;
   padding: 0.5em;
-  
   width: 100%;
 
   /* border: 1px solid black; */

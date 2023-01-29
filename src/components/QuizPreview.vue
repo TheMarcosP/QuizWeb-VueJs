@@ -1,5 +1,6 @@
 <script setup>
 import { defineProps } from 'vue';
+import { RouterLink, RouterView } from 'vue-router'
 
 const props = defineProps({
     header: {
@@ -11,7 +12,7 @@ const props = defineProps({
         required: true
     },
     nQuestions: {
-        type: String,
+        type: Number,
         required: true
     }
 })

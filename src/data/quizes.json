@@ -6,32 +6,60 @@
         "questions": [
             {
                 "header": "5+5?",
+                "id": 0,
                 "options": [
-                    "10",
-                    "11",
-                    "12",
-                    "13"
+                    {
+                        "id": 0,
+                        "text": "10",
+                        "isCorrect": true
+                    },
+                    {
+                        "id": 1,
+                        "text": "11",
+                        "isCorrect": false
+                    },
+                    {
+                        "id": 2,
+                        "text": "12",
+                        "isCorrect": false
+                    },
+                    {
+                        "id": 3,
+                        "text": "13",
+                        "isCorrect": false
+                    }
                 ]
 
-            }
-            
-        ]
-        
-    },
-    {
-        "id": 2,
-        "header": "biology",
-        "questions": [
+            },
             {
-                "header": "h20?",
+                "header": "6*2",
+                "id": 1,
                 "options": [
-                    "water",
-                    "fire",
-                    "ice",
-                    "air"
+                    {
+                        "id": 0,
+                        "text": "10",
+                        "isCorrect": false
+                    },
+                    {
+                        "id": 1,
+                        "text": "11",
+                        "isCorrect": false
+                    },
+                    {
+                        "id": 2,
+                        "text": "12",
+                        "isCorrect": true
+                    },
+                    {
+                        "id": 3,
+                        "text": "13",
+                        "isCorrect": false
+                    }
                 ]
-
+                
             }
+
+            
         ]
         
     }
