@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "header": "math",
+        "img": "../data/images/math.webp",
+        "questions": [
+            {
+                "header": "5+5?",
+                "options": [
+                    "10",
+                    "11",
+                    "12",
+                    "13"
+                ]
+
+            }
+            
+        ]
+        
+    },
+    {
+        "id": 2,
+        "header": "biology",
+        "questions": [
+            {
+                "header": "h20?",
+                "options": [
+                    "water",
+                    "fire",
+                    "ice",
+                    "air"
+                ]
+
+            }
+        ]
+        
+    }
+]
